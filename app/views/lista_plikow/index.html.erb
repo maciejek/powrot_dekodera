@@ -9,13 +9,13 @@
     <th></th>
   </tr>
 
-<% @pliki.each do |pliki| %>
-<% mojString = plik.image %>
+<% @test2s.each do |test2| %>
+<% mojString = test2.image %>
   <tr>    
     <td><%= mojString %></td>
-    <td><%= link_to 'Show', plik %></td>
-    <td><%= link_to 'Edit', edit_lista_plikow_path(plik) %></td>
-    <td><%= link_to 'Destroy', plik, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Show', test2 %></td>
+    <td><%= link_to 'Edit', edit_test2_path(test2) %></td>
+    <td><%= link_to 'Destroy', test2, confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

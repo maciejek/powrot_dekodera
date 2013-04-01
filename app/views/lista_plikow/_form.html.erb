@@ -1,10 +1,10 @@
-<%= form_for(@pliki) do |f| %>
-  <% if @pliki.errors.any? %>
+<%= form_for @test2,:url=>{ :controller=>"lista_plikow", :action=>"create"}, :html => {:multipart => true} do |f| %>
+  <% if @test2.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@pliki.errors.count, "error") %> prohibited this pliki from being saved:</h2>
+      <h2><%= pluralize(@test2.errors.count, "error") %> prohibited this test2 from being saved:</h2>
 
       <ul>
-      <% @pliki.errors.full_messages.each do |msg| %>
+      <% @test2.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -14,7 +14,7 @@
   
   <div class="field">
     <%= f.label 'sciezka' %><br />
-    <%= f.file_field :sciezka %>
+    <%= f.file_field :image %>
   </div>
   <div class="actions">
     <%= f.submit %>
