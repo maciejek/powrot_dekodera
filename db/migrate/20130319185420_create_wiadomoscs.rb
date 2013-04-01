@@ -1,7 +1,7 @@
 class CreateWiadomoscs < ActiveRecord::Migration
   def change
-    create_table :wiadomoscs do |t|
-      t.integer :idWiadomosc
+    create_table :wiadomoscs, :id => false do |t|
+      t.primary_key :idWiadomosc
       t.string :odbiorca
       t.string :nadawca
       t.text :tresc

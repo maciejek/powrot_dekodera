@@ -1,7 +1,7 @@
 class CreateProjekts < ActiveRecord::Migration
   def change
-    create_table :projekts do |t|
-      t.integer :idProjekt
+    create_table :projekts, :id => false do |t|
+      t.primary_key :idProjekt
       t.string :nazwa
 
       t.timestamps

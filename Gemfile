@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'rspec-rails', '2.11.0'
 gem 'bootstrap-sass', '2.1'
 gem 'devise'
+gem 'carrierwave'
 
 
 # Gems used only for assets and not required

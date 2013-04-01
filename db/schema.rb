@@ -13,8 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20130319201314) do
 
-  create_table "dyskusjas", :force => true do |t|
-    t.integer  "idDyskusja"
+  create_table "dyskusjas", :primary_key => "idDyskusja", :force => true do |t|
     t.string   "user_email"
     t.integer  "projektID"
     t.string   "temat"
@@ -22,8 +21,7 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "komentarzs", :force => true do |t|
-    t.integer  "idKomentarz"
+  create_table "komentarzs", :primary_key => "idKomentarz", :force => true do |t|
     t.integer  "plikID"
     t.string   "user_email"
     t.string   "tresc"
@@ -32,8 +30,7 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "pliks", :force => true do |t|
-    t.integer  "idPlik"
+  create_table "pliks", :primary_key => "idPlik", :force => true do |t|
     t.string   "user_email"
     t.integer  "projektID"
     t.datetime "dataGodzina"
@@ -44,8 +41,7 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "posts", :force => true do |t|
-    t.integer  "idPost"
+  create_table "posts", :primary_key => "idPost", :force => true do |t|
     t.integer  "dyskusjaID"
     t.string   "autor"
     t.text     "tresc"
@@ -54,8 +50,7 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "projekts", :force => true do |t|
-    t.integer  "idProjekt"
+  create_table "projekts", :primary_key => "idProjekt", :force => true do |t|
     t.string   "nazwa"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -100,8 +95,7 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "wiadomoscs", :force => true do |t|
-    t.integer  "idWiadomosc"
+  create_table "wiadomoscs", :primary_key => "idWiadomosc", :force => true do |t|
     t.string   "odbiorca"
     t.string   "nadawca"
     t.text     "tresc"
@@ -110,16 +104,15 @@ ActiveRecord::Schema.define(:version => 20130319201314) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "wydarzenies", :force => true do |t|
-    t.integer  "idWydarzenie"
+  create_table "wydarzenies", :primary_key => "idWydarzenie", :force => true do |t|
     t.string   "user_email"
     t.integer  "projektID"
     t.string   "nazwa"
     t.datetime "dataGodzina"
     t.string   "info"
     t.boolean  "publiczny"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
 end
