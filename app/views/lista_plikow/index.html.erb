@@ -1,0 +1,25 @@
+
+<h1>Uploadowanie plików</h1>
+
+<table>
+  <tr>   
+    <th>Sciezka</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pliki.each do |pliki| %>
+<% mojString = plik.image %>
+  <tr>    
+    <td><%= mojString %></td>
+    <td><%= link_to 'Show', plik %></td>
+    <td><%= link_to 'Edit', edit_lista_plikow_path(plik) %></td>
+    <td><%= link_to 'Destroy', plik, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'dodaj nowy plik', new_lista_plikow_path %>

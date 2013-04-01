@@ -1,0 +1,22 @@
+<%= form_for(@pliki) do |f| %>
+  <% if @pliki.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pliki.errors.count, "error") %> prohibited this pliki from being saved:</h2>
+
+      <ul>
+      <% @pliki.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="field">
+    <%= f.label 'sciezka' %><br />
+    <%= f.file_field :sciezka %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
