@@ -1,13 +1,18 @@
-<div class="center hero-unit">
-  <h1>Welcome to the Sample App</h1>
+<div class="hero-unit">
+  <h1>Powrót dekodera</h1>
 
   <h2>
     This is the home page for the
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+    <a href="http://modanasuknie.blox.pl/">dekodery </a>
     sample application.
+
   </h2>
+  
+  <% if uzytkownik_signed_in? %>
+  <div>Signed in as... <%= current_uzytkownik.email %></div>
+<% end %>
 
   <%= link_to "Sign up now!", new_uzytkownik_registration_path, class: "btn btn-large btn-primary" %>
 </div>
 
-<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+<%#=link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
