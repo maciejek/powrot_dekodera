@@ -8,9 +8,7 @@
 
   </h2>
   
-  <% if uzytkownik_signed_in? %>
-  <div>Signed in as... <%= current_uzytkownik.email %></div>
-<% end %>
+
 
   <%= link_to "Sign up now!", new_uzytkownik_registration_path, class: "btn btn-large btn-primary" %>
 </div>
