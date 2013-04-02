@@ -15,7 +15,7 @@
     <td><%= mojString %></td>
     <td><%= link_to 'Show', lista_plikow_path(plik), :method=>:get %></td>
     <td><%= link_to 'Edit', edit_lista_plikow_path(plik) %></td>
-    <td><%= link_to 'Destroy', lista_plikow_path(plik), confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Destroy', lista_plikow_path(plik), confirm: 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
