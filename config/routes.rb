@@ -4,7 +4,7 @@ SampleApp::Application.routes.draw do
 
   get "users/new"
   
-  resources :lista_plikow
+  resources :lista_plikow #, :only => [:new, :create, :index]
   
 =begin 
   match '/lista_plikow/', :to => 'lista_plikow#index'

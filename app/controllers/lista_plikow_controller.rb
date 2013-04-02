@@ -1,84 +1,84 @@
 class ListaPlikowController < ApplicationController
 
-  # GET /test2s
-  # GET /test2s.json
+  # GET /pliki
+  # GET /pliki.json
   
   def index
-    @test2s = Plik.all
+    @pliki = Plik.all
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @test2s }
+      format.json { render json: @pliki }
     end
   end
 
-  # GET /test2s/1
-  # GET /test2s/1.json
+  # GET /pliki/1
+  # GET /pliki/1.json
   def show
-    @test2 = Test2.find(params[:id])
+    @plik = Plik.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @test2 }
+      format.json { render json: @plik }
     end
   end
 
-  # GET /test2s/new
-  # GET /test2s/new.json
+  # GET /pliki/new
+  # GET /pliki/new.json
   def new
-    @test2 = Plik.new
+    @plik = Plik.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @test2 }
+      format.json { render json: @plik }
     end
   end
 
-  # GET /test2s/1/edit
+  # GET /pliki/1/edit
   def edit
-    @test2 = Test2.find(params[:id])
+    @plik = Plik.find(params[:id])
   end
 
-  # POST /test2s
-  # POST /test2s.json
+  # POST /pliki
+  # POST /pliki.json
   def create
-    @test2 = Test2.new(params[:test2])
+    @plik = Plik.new(params[:plik])
 
     respond_to do |format|
-      if @test2.save
-        format.html { redirect_to @test2, notice: 'Test2 was successfully created.' }
-        format.json { render json: @test2, status: :created, location: @test2 }
+      if @plik.save
+        format.html { redirect_to lista_plikow_path(@plik), notice: 'Plik was successfully created.' }
+        format.json { render json: @plik, status: :created, location: @plik }
       else
         format.html { render action: "new" }
-        format.json { render json: @test2.errors, status: :unprocessable_entity }
+        format.json { render json: @plik.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # PUT /test2s/1
-  # PUT /test2s/1.json
+  # PUT /pliki/1
+  # PUT /pliki/1.json
   def update
-    @test2 = Test2.find(params[:id])
+    @plik = Plik.find(params[:id])
 
     respond_to do |format|
-      if @test2.update_attributes(params[:test2])
-        format.html { redirect_to @test2, notice: 'Test2 was successfully updated.' }
+      if @plik.update_attributes(params[:plik])
+        format.html { redirect_to @plik, notice: 'Plik was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @test2.errors, status: :unprocessable_entity }
+        format.json { render json: @plik.errors, status: :unprocessable_entity }
       end
     end
   end
 
-  # DELETE /test2s/1
-  # DELETE /test2s/1.json
+  # DELETE /pliki/1
+  # DELETE /pliki/1.json
   def destroy
-    @test2 = Test2.find(params[:id])
-    @test2.destroy
+    @plik = Plik.find(params[:id])
+    @plik.destroy
 
     respond_to do |format|
-      format.html { redirect_to test2s_url }
+      format.html { redirect_to lista_plikow_index_path }
       format.json { head :no_content }
     end
   end

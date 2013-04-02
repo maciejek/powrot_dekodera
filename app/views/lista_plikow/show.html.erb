@@ -1,20 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @test2.title %>
+  <b>Id Pliku:</b>
+  <%= @plik.IdPlik %>
 </p>
 
 <p>
-  <b>Description:</b>
-  <%= @test2.description %>
-</p>
-
-<p>
-  <b>Image:</b>
-  <%= @test2.image_url %>
+  <b>Scieżka:</b>
+  <%= @plik.sciezka_url %>
 </p>
 
 
-<%= link_to 'Edit', edit_lista_plikow_path(@test2) %> |
-<%= link_to 'Back', lista_plikow_path %>
+<%= link_to 'Edit', edit_lista_plikow_path(@plik) %> |
+<%= link_to 'Back', lista_plikow_index_path %>
