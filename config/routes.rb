@@ -3,7 +3,14 @@ SampleApp::Application.routes.draw do
   devise_for :uzytkowniks
 
   get "users/new"
-
+  
+  resources :lista_plikow #, :only => [:new, :create, :index]
+  
+=begin 
+  match '/lista_plikow/', :to => 'lista_plikow#index'
+  match '/lista_plikow/new', :to => 'lista_plikow#new', :as => :new_lista_plikow_path
+  match '/lista_plikow/edit', :to => 'lista_plikow#edit'
+=end
   root to: 'static_pages#home'
 
   match '/signup',  to: 'users#new'
