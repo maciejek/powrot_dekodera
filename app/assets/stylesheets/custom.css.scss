@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  padding: 60px 0px 0px 100px;
+  padding: 60px 0px 20px 100px;
 }
 
 section {
@@ -19,6 +19,7 @@ section {
 }
 
 textarea {
+  resize: vertical;
   resize: vertical;
 }
 
