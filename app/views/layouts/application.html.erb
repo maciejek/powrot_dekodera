@@ -8,12 +8,21 @@
     <%= render 'layouts/shim' %>    
   </head>
   <body>
+	<div class="navbar navbar-fixed-top">
     <%= render 'layouts/header' %>
-    <div class="container">
-	       <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p> 
-      <%= yield %>
+	</div>
+
+    <div class="container-fluid">
+
+
+	   <div class="span3">
+			<%= render 'layouts/sidebar' %>
+	   </div>
+	 <div class="span9"><%= yield %></div>
+	 
+	 	<div class="navbar navbar-fixed-bottom">
       <%= render 'layouts/footer' %>
+	  	 	<div class="navbar navbar-fixed-bottom">
     </div>
   </body>
 </html>
