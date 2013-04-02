@@ -4,7 +4,6 @@ class CreateUzytkowniks < ActiveRecord::Migration
       t.string :nazwisko
       t.string :imie
       t.date :dataUr
-      t.string :haslo
       t.boolean :administrator
 
       t.timestamps

@@ -26,9 +26,6 @@ class ListaPlikowController < ApplicationController
   # GET /pliki/new
   # GET /pliki/new.json
   def new
-	if (user_sign_in)
-	
-	end
     @plik = Plik.new
 
     respond_to do |format|
